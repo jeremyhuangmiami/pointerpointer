@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pointer Pointer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensure the body and html take full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling on the main page */
+            font-family: "Inter", sans-serif; /* Set default font */
+        }
+        #app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        #content-iframe {
+            flex-grow: 1; /* Allow iframe to take up available space */
+            width: 100%;
+            border: none; /* Remove default iframe border */
+        }
+        #footer {
+            flex-shrink: 0; /* Prevent footer from shrinking */
+            background-color: #1a202c; /* Dark background for footer */
+            color: #e2e8f0; /* Light text color */
+            padding: 0.5rem 1rem; /* Padding for the footer */
+            text-align: center;
+            font-size: 0.875rem; /* Small font size */
+        }
+        #footer a {
+            color: #90cdf4; /* Light blue for links */
+            text-decoration: none;
+        }
+        #footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div id="app-container" class="w-screen h-screen">
+        <!-- Main content iframe -->
+        <iframe id="content-iframe" src="https://pointerpointer.com/" title="Pointer Pointer"></iframe>
+
+        <!-- Footer section -->
+        <footer id="footer" class="flex flex-col md:flex-row justify-center items-center space-y-1 md:space-y-0 md:space-x-4">
+            <p class="rounded-md">jeremyworld.org</p>
+            <p class="rounded-md">pointerpointer@jeremyworld.org</p>
+            <p class="rounded-md">donate.jeremyworld.org</p>
+            <a href="https://pointerpointer.com/" target="_blank" rel="noopener noreferrer" class="rounded-md">pointerpointer.com</a>
+        </footer>
+    </div>
+</body>
+</html>
